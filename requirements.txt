@@ -1,0 +1,5 @@
+configparser
+giphy_client
+python-dateutil
+requests
+twython
