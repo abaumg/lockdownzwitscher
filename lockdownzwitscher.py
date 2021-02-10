@@ -1,6 +1,7 @@
 import giphy_client
 import io
 import os
+import pathlib
 import random
 
 import requests
@@ -8,6 +9,10 @@ from twython import Twython
 from configparser import ConfigParser
 from datetime import datetime
 from dateutil import parser
+
+# change workingdir
+workingdir = pathlib.Path(__file__).parent.absolute()
+os.chdir(workingdir)
 
 # read configuration
 cfg = ConfigParser()
