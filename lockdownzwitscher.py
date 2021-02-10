@@ -34,6 +34,9 @@ today = datetime.today().date()
 until = parser.parse(cfg.get('countdown', 'date')).date()
 days = (until-today).days
 
+if days < 1:
+    quit()
+
 hashtag = random.choice(cfg.get('countdown', 'hashtags').split(','))
 tweetText = 'Friendly Reminder:\nNoch {} Tage Lockdown!\n😊 {}'.format(days, hashtag)
 
